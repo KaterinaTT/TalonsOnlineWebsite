@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TalonDBModelContainer" CdmEntityContainer="TalonDBEntities1">
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="TalonDBModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Infs">
+      <EntityTypeMapping TypeName="TalonDBModel.Inf">
+        <MappingFragment StoreEntitySet="Inf">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="About" ColumnName="About" />
+          <ScalarProperty Name="Preview" ColumnName="Preview" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="TalonDBModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Специальностьid" ColumnName="Специальностьid" />
+          <ScalarProperty Name="Эмэйл" ColumnName="Эмэйл" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата_рождения" />
+          <ScalarProperty Name="Отчество" ColumnName="Отчество" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

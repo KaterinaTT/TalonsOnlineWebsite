@@ -1,0 +1,45 @@
+﻿
+
+@model  IEnumerable<Talons.Models.Inf>
+
+@{
+    Layout = "/Views/Home/MasterView.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/css/styleform.css">
+
+
+
+
+<div id="content">
+
+    <div id="main" style="margin-left: 487px;">
+        <h2>Заказ талона</h2>
+
+        <form onsubmit=" return true" action="/Home/Ok" method="POST" >
+
+            <fieldset style="border : 0px;">
+                Фамилия: <br> <input type="text" name="Surname" placeholder="Введите Вашу фамилию" required style=" width: 300px; height: 30px; border-color: #3d9cc4;" /><br>
+                Имя:<br> <input type="text" name="Name" placeholder="Введите Ваше имя" required style=" width: 300px; height: 30px; border-color: #3d9cc4;" /> <br>
+                Отчество:<br><input type="text" name="Secondname" placeholder="Введите Ваше отчество" required style=" width: 300px; height: 30px; border-color: #3d9cc4;" /> <br>
+                Дата рождения:<br> <input type="text" name="BirthDate" placeholder="01.02.2000" required style=" width: 300px; height: 30px; border-color: #3d9cc4;" /> <br>
+                Номер телефона: <br> <input type="tel" name="Tel" placeholder="+375(29)-361-28-10" required patern="375[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" style=" width: 300px; height: 30px; border-color: #3d9cc4;" /> <br>
+                E-mail:<br> <input type="text" name="Email" placeholder="Somemail@gmail.com" style=" width: 300px; height: 30px;border-color: #3d9cc4;" /> <br>
+                Выберите врача: <br> <select name="specialty" style=" width: 300px; height: 30px;border-color: #3d9cc4;">
+                    @Html.Action("FormOptions", "Home", new { item_id = ViewBag.Item })
+
+                </select><br>
+
+                <br>
+
+                <input type="submit"  style=" width: 90px; height: 30px;border-color: #3d9cc4;" />
+            </fieldset>
+        </form>
+
+
+
+
+    </div>
+
+</div>
+<div id="footer"></div>
